@@ -1,0 +1,23 @@
+*초기화 이후
+1. src폴더에 영화 리뷰 데이터 추가
+  mock.json
+2. components 폴더 생성
+3. components 폴더에 ReviewList.js 생성
+  - items props를 받아 콘솔 출력
+    function ReviewList({ items }) {
+      console.log(items);
+      return <ul></ul>;
+    }
+4. App.js 생성
+  - 불러온 데이터를 items props으로 내려줌
+    import items from "../mock.json";
+    function App() {
+      return (
+      <div>
+        <ReviewList items={items} />
+      </div>
+      );
+    }
+5. index.js 수정
+  - <App /> 컴포넌트 출력
+-----------------------------
